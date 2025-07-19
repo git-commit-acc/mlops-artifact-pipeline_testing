@@ -1,10 +1,10 @@
 import sys, os
 sys.path.append(os.path.dirname(__file__))
 
-from utilities import load_configuration, get_digit_data, initialize_and_train, serialize_model, compute_metrics
+from utils import load_configuration, get_digit_data, initialize_and_train, serialize_model, compute_metrics
 
 def main():
-    config = load_configuration('../config/config.json')
+    config = load_configuration('config/config.json')
     X, y = get_digit_data()
     print(f"Loaded {X.shape[0]} records, {X.shape[1]} features each")
 
